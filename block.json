@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 2,
+    "name": "findkit/blog-archive",
+    "version": "0.1.0",
+    "title": "Blog Archive with Findkit",
+    "icon": "archive",
+    "description": "A block that displays a list of blog posts with Findkit",
+    "supports": {},
+    "attributes": {
+        "publicToken": {
+            "type": "string"
+        },
+        "instanceId": {
+            "type": "string"
+        }
+    },
+    "textdomain": "findkit",
+    "viewScript": "file:view.js",
+    "style": "file:view.css",
+    "editorScript": "file:editor.js",
+    "editorStyle": "file:editor.css",
+    "render": "file:render.php"
+}
