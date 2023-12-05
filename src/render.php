@@ -2,6 +2,7 @@
     data-public-token="<?php echo esc_attr($attributes["publicToken"] ?? ""); ?>"
     data-instance-id="<?php echo esc_attr($attributes["instanceId"] ?? ""); ?>"
 >
+
     <div class="findkit-blog-archive-loading hide">
         <p>Loading...</p>
     </div>
@@ -51,4 +52,5 @@
             ?>
         </p>
     </div>
+
 </div>
