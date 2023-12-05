@@ -7,6 +7,7 @@ import { FindkitUI, html, useCustomRouterData } from "@findkit/ui";
 const TAG_PREFIX = "wp_taxonomy/category/";
 
 function renderArchive(container) {
+    // Read the data attributes rendered in render.php
     // <div class="findkit-blog-archive-results" data-public-token=".." data-instance-id=".."></div>
     const publicToken = container.dataset.publicToken;
     const instanceId = container.dataset.instanceId;
@@ -22,7 +23,7 @@ function renderArchive(container) {
     // https://docs.findkit.com/ui/slot-overrides/
     // https://docs.findkit.com/ui/slot-overrides/slots#hit
     function Hit(props) {
-        // Customo fields exposed using the 'findkit_page_meta' filter in
+        // Custom fields exposed using the 'findkit_page_meta' filter in
         // block's the register.php
         const excerpt = props.hit.customFields.excerpt?.value;
         const author = props.hit.customFields.author?.value ?? "Findkit Crew";
@@ -143,7 +144,7 @@ function renderArchive(container) {
         }
 
         // Save the form state to the custom router data
-        // https://docs.findkit.com/ui/api/#defaultCustomRouterData
+        // https://docs.findkit.com/ui/api/#setCustomRouterData
         ui.setCustomRouterData(Object.fromEntries(new FormData(form)));
         updateSearch();
     }
