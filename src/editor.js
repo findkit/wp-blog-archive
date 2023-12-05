@@ -6,6 +6,7 @@ import ServerSideRender from "@wordpress/server-side-render";
 
 import metadata from "./block.json";
 import "./editor.css";
+import "./view.css";
 
 function Edit(props) {
     const blockBlocks = useBlockProps();
