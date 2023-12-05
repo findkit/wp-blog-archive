@@ -24,9 +24,9 @@ function renderArchive(container) {
     // https://docs.findkit.com/ui/slot-overrides/slots#hit
     function Hit(props) {
         // Custom fields exposed using the 'findkit_page_meta' filter in
-        // block's the register.php
+        // in the plugin.php
         const excerpt = props.hit.customFields.excerpt?.value;
-        const author = props.hit.customFields.author?.value ?? "Findkit Crew";
+        const author = props.hit.customFields.author?.value ?? "N/A";
         const featuredImage = props.hit.customFields.featuredImage?.value;
 
         const highlight = props.hit.highlight;
@@ -118,10 +118,10 @@ function renderArchive(container) {
         slots: { Hit },
 
         params: {
-            // Show only blog posts
+            // Show only the blog posts
             filter: { tags: "wp_post_type/post" },
 
-            // Show the lates blog posts first
+            // Show the latest blog posts first
             sort: { created: { $order: "desc" } },
         },
     });
