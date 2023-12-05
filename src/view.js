@@ -32,7 +32,7 @@ function renderArchive(container) {
         const highlight = props.hit.highlight;
 
         const [data] = useCustomRouterData();
-        const selectedTag = data.selectedTag;
+        const selectedTag = data.tag;
 
         // Get the tags with the prefix and remove the prefix
         const tags = props.hit.tags.flatMap((tag) => {
