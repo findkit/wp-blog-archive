@@ -8,12 +8,8 @@
     "description": "A block that displays a list of blog posts with Findkit",
     "supports": {},
     "attributes": {
-        "publicToken": {
-            "type": "string"
-        },
-        "instanceId": {
-            "type": "string"
-        }
+        "publicToken": { "type": "string" },
+        "instanceId": { "type": "string" }
     },
     "textdomain": "findkit",
     "viewScript": "file:view.js",

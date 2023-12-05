@@ -6,7 +6,7 @@
 
 function findkit_get_excerpt($post_id) {
     if (function_exists('the_seo_framework')) {
-        $desc = \the_seo_framework()->get_description($post_id);
+        $desc = @\the_seo_framework()->get_description($post_id);
         if ($desc) {
             return $desc;
         }

@@ -10,19 +10,18 @@
 
     <form class="findkit-tag-form">
         <?php
-        $tags = get_terms(['hide_empty' => true, 'taxonomy' => 'post_tag',]);
+        $categories = get_categories([ 'hide_empty' => true ]);
 
-        foreach ($tags as $tag) {
-            $id = "tag-$tag->term_id";
-            echo '<input type="radio" name="tag" id="' . \esc_attr($id) . '" value="' . \esc_attr($tag->name) . '">';
+        foreach ($categories as $cat) {
+            $id = "tag-$cat->term_id";
+            echo '<input type="radio" name="tag" id="' . \esc_attr($id) . '" value="' . \esc_attr($cat->slug) . '">';
             echo '<label tabindex=0 class="findkit-tag" for="' . \esc_attr($id) . '">';
             echo '#';
-            echo \esc_html($tag->name);
+            echo \esc_html($cat->slug);
             echo '</label>';
         }
 
         echo '<input type="reset" class="findkit-tag" value="x" >';
-
 
         ?>
     </form>

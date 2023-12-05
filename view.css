@@ -95,9 +95,8 @@ input.findkit-search-blog {
     border-radius: 15px;
 }
 
-label.findkit-tag:hover,
-input.findkit-tag:hover,
-button.findkit-tag:hover,
+.findkit-tag:hover,
+.findkit-tag.active,
 .findkit-tag-form input:checked + label {
     background-color: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--light);
@@ -108,4 +107,9 @@ button.findkit-tag:hover,
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
+}
+
+.findkit-read-more {
+    display: flex;
+    width: fit-content;
 }
