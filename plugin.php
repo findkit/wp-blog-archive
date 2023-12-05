@@ -8,7 +8,7 @@
  * Author:            Esa-Matti Suuronen <esamatti@findkit.com>
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       todo-list
+ * Text Domain:       block-archive
  *
  * @package           create-block
  */
