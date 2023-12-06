@@ -1,6 +1,6 @@
 <div class="findkit-blog-archive"
-    data-public-token="<?php echo esc_attr($attributes["publicToken"] ?? ""); ?>"
-    data-instance-id="<?php echo esc_attr($attributes["instanceId"] ?? ""); ?>"
+    data-public-token="<?= esc_attr($attributes["publicToken"] ?? ""); ?>"
+    data-instance-id="<?= esc_attr($attributes["instanceId"] ?? ""); ?>"
 >
 
     <div class="findkit-blog-archive-loading hide">
@@ -17,9 +17,9 @@
             $id = "tag-$cat->term_id";
         ?>
 
-        <input type="radio" name="tag" id="<?php echo esc_attr($id); ?>" value="<?php echo esc_attr($cat->slug); ?>">
-        <label tabindex="0" class="findkit-tag" for="<?php echo esc_attr($id); ?> ">
-            #<?php echo esc_html($cat->slug); ?>
+        <input type="radio" name="tag" id="<?= esc_attr($id); ?>" value="<?= esc_attr($cat->slug); ?>">
+        <label tabindex="0" class="findkit-tag" for="<?= esc_attr($id); ?> ">
+            #<?= esc_html($cat->slug); ?>
         </label>
 
         <?php endforeach; ?>
