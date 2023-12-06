@@ -4,7 +4,6 @@ import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
 import { TextControl, Panel, PanelBody, PanelRow } from "@wordpress/components";
 import ServerSideRender from "@wordpress/server-side-render";
 
-import metadata from "./block.json";
 import "./editor.css";
 import "./view.css";
 
@@ -65,7 +64,7 @@ function Edit(props) {
 registerBlockType(metadata.name, {
     attributes: metadata.attributes,
     title: metadata.title,
-    category: "widgets",
+    category: metadata.category,
     edit: Edit,
     save() {
         return null;

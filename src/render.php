@@ -13,34 +13,29 @@
         <?php
         $categories = get_categories([ 'hide_empty' => true ]);
 
-        foreach ($categories as $cat) {
+        foreach ($categories as $cat) :
             $id = "tag-$cat->term_id";
-            echo '<input type="radio" name="tag" id="' . \esc_attr($id) . '" value="' . \esc_attr($cat->slug) . '">';
-            echo '<label tabindex=0 class="findkit-tag" for="' . \esc_attr($id) . '">';
-            echo '#';
-            echo \esc_html($cat->slug);
-            echo '</label>';
-        }
-
-        echo '<input type="reset" class="findkit-tag" value="x" >';
-
         ?>
+
+        <input type="radio" name="tag" id="<?php echo esc_attr($id); ?>" value="<?php echo esc_attr($cat->slug); ?>">
+        <label tabindex="0" class="findkit-tag" for="<?php echo esc_attr($id); ?> ">
+            #<?php echo esc_html($cat->slug); ?>
+        </label>
+
+        <?php endforeach; ?>
+
+        <input type="reset" class="findkit-tag" value="x" >
+
     </form>
 
-    <?php
-
-    if (empty($attributes["publicToken"])) {
-    ?>
+    <?php if (empty($attributes["publicToken"])) : ?>
         <div class="findkit-blog-archive-error">
             <p>
                 Cannot render Findkit Blog Archive block.
                 Please set the public token in the block settings
             </p>
         </div>
-    <?php
-    }
-
-    ?>
+    <?php endif; ?>
 
     <div class="findkit-blog-archive-results">
         <p>
