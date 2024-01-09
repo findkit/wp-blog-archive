@@ -4,6 +4,7 @@
   "name": "findkit/blog-archive",
   "version": "0.1.0",
   "title": "Blog Archive with Findkit",
+  "category": "widgets",
   "icon": "archive",
   "description": "A block that displays a list of blog posts with Findkit",
   "supports": {},
