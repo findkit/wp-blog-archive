@@ -18,7 +18,7 @@
         ?>
 
         <input type="radio" name="tag" id="<?php echo esc_attr($id); ?>" value="<?php echo esc_attr($cat->slug); ?>">
-        <label tabindex="0" class="findkit-tag" for="<?php echo esc_attr($id); ?> ">
+        <label tabindex="0" class="findkit-tag" for="<?php echo esc_attr($id); ?>">
             #<?php echo esc_html($cat->slug); ?>
         </label>
 
