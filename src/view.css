@@ -38,7 +38,10 @@ input.findkit-search-blog {
 }
 
 .findkit--hit em {
-    background-color: var(--wp--preset--color--primary, var(--findkit--brand-color));
+    background-color: var(
+        --wp--preset--color--primary,
+        var(--findkit--brand-color)
+    );
     padding-left: 5px;
     padding-right: 5px;
     color: white;
