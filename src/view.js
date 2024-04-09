@@ -59,11 +59,17 @@ function renderArchive(container) {
                     ${featuredImage ? html`<img src="${featuredImage}" />` : ""}
 
                     <p class="wp-block-post-excerpt__more-text">
-                        <span
-                            dangerouslySetInnerHTML=${{
-                                __html: highlight || excerpt,
-                            }}
-                        />
+                        ${highlight
+                            ? html`<${props.parts.Highlight}
+                                  highlight=${highlight}
+                              />`
+                            : html`
+                                  <span
+                                      dangerouslySetInnerHTML=${{
+                                          __html: excerpt,
+                                      }}
+                                  />
+                              `}
                         ${" "}
                         <a class="findkit-read-more" href=${props.hit.url}>
                             Read more

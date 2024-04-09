@@ -116,3 +116,7 @@ input.findkit-search-blog {
     display: flex;
     width: fit-content;
 }
+
+.findkit--em {
+    color: white;
+}
